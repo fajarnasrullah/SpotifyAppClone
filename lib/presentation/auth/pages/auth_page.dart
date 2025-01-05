@@ -4,6 +4,7 @@ import 'package:spotify_app_clone/common/helpers/is_dark_mode.dart';
 import 'package:spotify_app_clone/common/widgets/button/basic_button.dart';
 import 'package:spotify_app_clone/core/configs/assets/app_images.dart';
 import 'package:spotify_app_clone/core/configs/assets/app_vectors.dart';
+import 'package:spotify_app_clone/presentation/auth/pages/signup_page.dart';
 
 class AuthPage extends StatelessWidget {
   const AuthPage({super.key});
@@ -59,7 +60,12 @@ class AuthPage extends StatelessWidget {
                         flex: 1,
                           child: BasicButton(
                               onPressed: () {
-
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (BuildContext context) => const SignupPage()
+                                    )
+                                );
                               },
                               title: 'Register'
                           )
