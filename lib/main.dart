@@ -9,6 +9,8 @@ import 'package:spotify_app_clone/core/configs/themes/app_themes.dart';
 import 'package:spotify_app_clone/presentation/choose_mode/bloc/theme_cubit.dart';
 import 'package:spotify_app_clone/presentation/splash/pages/splash.dart';
 
+import 'service_locator.dart';
+
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,6 +22,8 @@ Future<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  await initializeDependecies();
   runApp(MyApp());
 }
 class MyApp extends StatelessWidget {
