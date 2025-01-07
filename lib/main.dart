@@ -23,7 +23,7 @@ Future<void> main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  await initializeDependecies();
+  await initializeDependencies();
   runApp(MyApp());
 }
 class MyApp extends StatelessWidget {
